@@ -25,6 +25,7 @@ const int hospital::nursesLimit = 50;
 const int hospital::driversLimit = 30;
 const int hospital::ambulancesLimit = 30;
 const int hospital::appointmentsLimit = 240; //per day;
+const int hospital::medicationsLimit = 1000; //per day;
 // ummm, patients limit, ummm, no!
 // appointments limit is kind of a patients limit;
 // rest hospitalized patients limit must be equal to;

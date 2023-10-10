@@ -1,2 +1,3 @@
 ambulanceId,model,manufacturer,vrn,idle?,headedTowards(ifNotIdle),driverID(ifNotIdle)
-1,TATA X9,TATA,MH02JK3012,N,EXAMPLE^ LINE^ 1`EXAMPLE^ LINE^ 2`EXAMPLE CITY`EXAMPLE STATE`EXAMPLE PIN CODE`EXAMPLE COUNTRY,1
+1,TATA X9,TATA,MH02JK3012,N,Nanjing``Nanjing`Jiangsu`01`China,-1
+2,che,tesila,123,Y,NA,NA

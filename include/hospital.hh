@@ -23,11 +23,13 @@ private:
     static map<int, ambulance> ambulancesList;
     static map<int, appointment> appointmentsList;
 
+
     static const int doctorsLimit;
     static const int nursesLimit;
     static const int driversLimit;
     static const int ambulancesLimit;
     static const int appointmentsLimit;
+    static const int medicationsLimit;
 
     friend class doctor;
     friend class patient;
