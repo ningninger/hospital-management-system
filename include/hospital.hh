@@ -11,6 +11,7 @@ using namespace std;
 #include "./driver.hh"
 #include "./ambulance.hh"
 #include "./appointment.hh"
+#include "./medication.hh"
 
 class hospital
 {
@@ -22,6 +23,7 @@ private:
     static map<int, driver> driversList;
     static map<int, ambulance> ambulancesList;
     static map<int, appointment> appointmentsList;
+    static map<int, Medication> medicationsList;
 
 
     static const int doctorsLimit;
@@ -37,6 +39,7 @@ private:
     friend class driver;
     friend class ambulance;
     friend class appointment;
+    friend class Medication;
 
 public:
     static void printDoctors();
@@ -45,6 +48,7 @@ public:
     static void printDrivers();
     static void printAmbulances();
     static void printAppointments();
+    static void printMedications();
 };
 
 #endif // !HOSPITAL

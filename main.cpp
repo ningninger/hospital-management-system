@@ -23,6 +23,73 @@ void doctorsMenu();
 void nursesMenu();
 void driversMenu();
 void ambulancesMenu();
+void medicationsMenu();
+
+void medicationsMenu()
+{
+    bool exit = false;
+    while (!exit)
+    {
+        int purpose = 0;
+        cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        cout << "\nSelect an option:\n\n";
+
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        cout << "./HOME/MEDICATIONS\n";
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        cout << "[01] : Add a medication\n";
+        cout << "[02] : Get medication details\n";
+        cout << "[03] : Remove a medication\n";
+        cout << "[04] : Fetch medication details from history\n";
+        cout << "[05] : Get details of all registered medications\n\n";
+        cout << "[-1] : Back\n";
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+        cout << "Enter your choice: ";
+        cin >> purpose;
+
+        if (purpose == 1)
+        {
+            Medication m;
+            m.addMedication();
+        }
+        else if (purpose == 2)
+        {
+            Medication m;
+            m.getDetails();
+            m.printDetails();
+        }
+        else if (purpose == 3)
+        {
+            Medication m;
+            m.removeMedication();
+        }
+        else if (purpose == 4)
+        {
+            //TODO: fetch medication details from history
+        }
+        else if (purpose == 5)
+        {
+            hospital::printMedications();
+        }
+        else if (purpose == -1)
+        {
+            exit = true;
+            break;
+        }
+        else
+        {
+            cout << "Invalid choice!\n";
+        }
+
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clearing cin buffer;
+
+        cout << endl;
+        cout << "\nPress ENTER to continue...\n";
+        cout << endl;
+
+        getchar();
+    }
+}
 
 void appointmentsMenu()
 {
@@ -511,12 +578,14 @@ int main()
         driver d2;
         ambulance a1;
         appointment a2;
+        Medication m;
         d1.fillMap();
         p.fillMap();
         n.fillMap();
         d2.fillMap();
         a1.fillMap();
         a2.fillMap();
+        m.fillMap();
         // NOTE:
         // fill drivers' Map before ambulances' Map;
         // fill doctors' and patients' Map before appointments' Map;
@@ -535,7 +604,8 @@ int main()
         cout << "[03] : DOCTORS\n";
         cout << "[04] : NURSES\n";
         cout << "[05] : DRIVERS\n";
-        cout << "[06] : AMBULANCES\n\n";
+        cout << "[06] : AMBULANCES\n";
+        cout << "[07] : MEDICATIONS\n\n";
         cout << "[-1] : EXIT\n";
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
         cout << "Enter your choice: ";
@@ -573,6 +643,10 @@ int main()
         {
             ambulancesMenu();
         }
+        else if (category == 7)
+        {
+            medicationsMenu();
+        }
         else
         {
             cout << "\nInvalid Choice!\n";
@@ -588,12 +662,14 @@ int main()
         driver d2;
         ambulance a1;
         appointment a2;
+        Medication m;
         d1.saveMap();
         p.saveMap();
         n.saveMap();
         d2.saveMap();
         a1.saveMap();
         a2.saveMap();
+        m.saveMap();
     }
 
     return 0;

@@ -1,2 +1,1 @@
 appointmentId,date(YYYYMMDD),doctorId,patientId,startTime(in 24-hr format)
-1,20230202,1,14,9
