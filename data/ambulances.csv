@@ -1,4 +1,4 @@
 ambulanceId,model,manufacturer,vrn,idle?,headedTowards(ifNotIdle),driverID(ifNotIdle)
-1,TATA X9,TATA,MH02JK3012,N,Nanjing``Nanjing`Jiangsu`01`China,-272729
+1,TATA X9,TATA,MH02JK3012,N,Nanjing``Nanjing`Jiangsu`01`China,-2727271
 2,che,tesila,123,Y,NA,NA
-3,s,s,s,N,`````,-2729
+3,s,s,s,N,`````,-27271
