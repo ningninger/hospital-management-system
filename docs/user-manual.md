@@ -48,7 +48,7 @@ ___
 - **Hospitalize a registered patient**
 - **Discharge a hospitalized patient**
 - **Report a death of a patient**
-- **Send an ambulance to an address** - the system itself checks for an idle ambulance and an idle driver and if not available, it reports so.
+- **Send an ambulance to an Address** - the system itself checks for an idle ambulance and an idle driver and if not available, it reports so.
 - **Report arrival of ambulance** - along with ambulance's status, system automatically updates the status of the driver who was sent with that ambulance as well.
 
 ___

@@ -8,7 +8,7 @@ using namespace std;
 
 #include "./include/global.hh"
 #include "./include/hospital.hh"
-#include "./include/address.hh"
+#include "./include/Address.hh"
 #include "./include/person.hh"
 #include "./include/appointment.hh"
 #include "./include/patient.hh"

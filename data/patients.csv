@@ -1,4 +1,4 @@
-patientId,firstName,lastName,gender,age,mobNumber,address,height,weight,wasHospitalized?,stillAlive(ifHospitalized)?
+patientId,firstName,lastName,gender,age,mobNumber,Address,height,weight,wasHospitalized?,stillAlive(ifHospitalized)?
 1,G.,Sherry,M,68,+91xxxxxxxxxx,23-D^ Jillah Rd``Pune`Maharashtra`500021`India,165,130,Y,Y
 2,Indira,Sharma,F,35,+91xxxxxxxxxx,62^ Andheri East``Mumbai`Maharashtra`400062`India,160,110,N,Y
 3,Karan,Singh,M,39,+91xxxxxxxxxx,633-C^ Raheja Chamber`Nariman Point`Mumbai`Maharashtra`400021`India,178,150,N,Y

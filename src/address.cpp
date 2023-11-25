@@ -6,9 +6,9 @@ using namespace std;
 #include <fstream>
 
 #include "./../include/global.hh"
-#include "./../include/address.hh"
+#include "./../include/Address.hh"
 
-address::address()
+Address::Address()
 {
     line1 = "";
     line2 = "";
@@ -17,9 +17,9 @@ address::address()
     pinCode = "";
     country = "";
 }
-void address::takeInput()
+void Address::takeInput()
 {
-    cout << "\nEnter address:\n";
+    cout << "\nEnter Address:\n";
     cout << "\nLine 1:\n";
     getline(cin >> ws, line1);
     cout << "\nLine 2 (optional):\n";
@@ -34,7 +34,7 @@ void address::takeInput()
     getline(cin >> ws, country);
     return;
 }
-void address::print()
+void Address::print()
 {
     cout << "Line 1: " << line1 << "\n";
     if (line2 != "")
@@ -50,7 +50,7 @@ void address::print()
     cout << "Country: " << country << "\n";
     return;
 }
-string address::addToStr()
+string Address::addToStr()
 {
     stringstream s;
     s << line1 << "`" << line2 << "`" << city << "`" << state << "`" << pinCode << "`" << country;
@@ -61,7 +61,7 @@ string address::addToStr()
             i = '^';
     return add;
 }
-void address::strToAdd(string str)
+void Address::strToAdd(string str)
 {
     stringstream s(str);
     

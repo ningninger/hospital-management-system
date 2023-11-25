@@ -359,7 +359,7 @@ void ambulance::send()
 
     idle = 0;
 
-    cout << "Enter destination address:\n";
+    cout << "Enter destination Address:\n";
     add.takeInput();
 
     //updating status of ambulance;

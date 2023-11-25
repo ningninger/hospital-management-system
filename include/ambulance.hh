@@ -4,7 +4,7 @@ using namespace std;
 #include <string>
 
 #include "./driver.hh"
-#include "./address.hh"
+#include "./Address.hh"
 
 class ambulance
 {
@@ -14,7 +14,7 @@ private:
     string manufacturer;
     string vrn; //vehicle registration number;
     bool idle;
-    address add;
+    Address add;
     driver D;
 
 public:

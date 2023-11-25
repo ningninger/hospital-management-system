@@ -3,7 +3,7 @@
 using namespace std;
 #include <string>
 
-class address
+class Address
 {
 private:
     string line1, line2;
@@ -13,7 +13,7 @@ private:
     string country;
 
 public:
-    address();
+    Address();
     void takeInput();
     void print();
     string addToStr();

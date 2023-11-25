@@ -1,13 +1,13 @@
-## class `address`:
+## class `Address`:
 ___
-the class `address` is made to be able to perform the following tasks:
+the class `Address` is made to be able to perform the following tasks:
 - take addresses as inputs,
 - convert them to a string (of a specified format) and return the string to be saved in `*.csv` files &
-- read the same strings to generate back the initially input address and output it.
+- read the same strings to generate back the initially input Address and output it.
 
 ___
 ### fields:
-the class `address` has the following fields as its private members;
+the class `Address` has the following fields as its private members;
 ```cpp
     string line1, line2;
     string city;
@@ -18,9 +18,9 @@ the class `address` has the following fields as its private members;
 
 ___
 ### methods:
-the class `address` has the following methods as its public members;
+the class `Address` has the following methods as its public members;
 ```cpp
-    address();
+    Address();
     void takeInput();
     void print();
     string addToStr();
@@ -28,12 +28,12 @@ the class `address` has the following methods as its public members;
 ```
 ___
 ### funtioning:
-- `address();` : the constructor of the class initializes all the fields of the class by an empty string i.e. `""`;
+- `Address();` : the constructor of the class initializes all the fields of the class by an empty string i.e. `""`;
 - `void takeInput();` : this function takes each of the fields (all are of type `string`) as input from the user side;
 - `void print();` : this function outputs each of the fields in a structured manner;
-- `string addToStr();` : this function converts the address contained in the fields of address object that called this funtion into a string (of specified format) and returns it;
+- `string addToStr();` : this function converts the Address contained in the fields of Address object that called this funtion into a string (of specified format) and returns it;
 
-    - values of the different fields i.e. `line1, line2, city, state, pinCode, country` are pushed into the address string seperated by a [backtick](https://en.wikipedia.org/wiki/Grave_accent) character, since commas (`,`) are already used by csv files for differentiating adjacent cells of the same row;
+    - values of the different fields i.e. `line1, line2, city, state, pinCode, country` are pushed into the Address string seperated by a [backtick](https://en.wikipedia.org/wiki/Grave_accent) character, since commas (`,`) are already used by csv files for differentiating adjacent cells of the same row;
     - also, since values of the fields `line1` and `line2` might contain commas (`,`), so, before storing them, an iteration is performed over them and each `,` is replaced by `^`;
 
         ```cpp
@@ -53,7 +53,7 @@ ___
 
 <br>
 
- - `strToAdd(string);` : takes the address string as the only argument and fills the fields of calling object (aka `this`) accordingly by reading the address string using `getline();` function and an `stringstream` object;
+ - `strToAdd(string);` : takes the Address string as the only argument and fills the fields of calling object (aka `this`) accordingly by reading the Address string using `getline();` function and an `stringstream` object;
 
     - the [backtick](https://en.wikipedia.org/wiki/Grave_accent) character is passed as the delimiter to the `getline();` function and the fields are filled one by one;
     - once all the fields are filled, an iteration is performed over the fields `line1` and `line2` and each `^` is replaced back by `,`;

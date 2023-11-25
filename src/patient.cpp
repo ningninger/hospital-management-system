@@ -61,7 +61,7 @@ void patient::saveMap()
     fstream f;
     f.open("./data/temp.csv", ios::out);
     // `le first line conataining column headers:
-    f << "patientId,firstName,lastName,gender,age,mobNumber,address,height,weight,wasHospitalized?,stillAlive(ifHospitalized)?\n";
+    f << "patientId,firstName,lastName,gender,age,mobNumber,Address,height,weight,wasHospitalized?,stillAlive(ifHospitalized)?\n";
     for (auto i : hospital::patientsList)
         f << i.second.id << "," << i.second.firstName << "," << i.second.lastName << "," << i.second.gender
           << "," << i.second.age << "," << i.second.mobNumber << "," << i.second.add.addToStr()

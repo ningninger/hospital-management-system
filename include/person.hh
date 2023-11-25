@@ -3,7 +3,7 @@
 using namespace std;
 #include <string>
 
-#include "./address.hh"
+#include "./Address.hh"
 
 class person //abstract class
 {
@@ -13,7 +13,7 @@ protected:
     char gender;
     int16_t age;
     string mobNumber;
-    address add;
+    Address add;
     string cat;
     int category;
     //category: 1:doctor; 2:patient; 3:nurse; 4:driver;

@@ -1,4 +1,4 @@
-firstName,lastName,gender,age,mobileNumber,address,height,weight,wasHospitalized?,stillAlive(ifHospitalized)?,discharged(ifHospitalized)?
+firstName,lastName,gender,age,mobileNumber,Address,height,weight,wasHospitalized?,stillAlive(ifHospitalized)?,discharged(ifHospitalized)?
 G.,Sherry,M,68,+91xxxxxxxxxx,23-D^ Jillah Rd``Pune`Maharashtra`500021`India,165,130,Y,Y,N
 Indira,Sharma,F,35,+91xxxxxxxxxx,62^ Andheri East``Mumbai`Maharashtra`400062`India,160,110,N,Y,N
 Karan,Singh,M,39,+91xxxxxxxxxx,633-C^ Raheja Chamber`Nariman Point`Mumbai`Maharashtra`400021`India,178,150,N,Y,N
