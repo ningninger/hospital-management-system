@@ -6,16 +6,16 @@ using namespace std;
 #include <fstream>
 
 #include "./../include/global.hh"
-#include "./../include/ambulance.hh"
+#include "./../include/Ambulance.hh"
 #include "./../include/hospital.hh"
 
-ambulance::ambulance()
+Ambulance::Ambulance()
 {
     id = -1;
     add.strToAdd("`````");
     D.id = -1;
 }
-void ambulance::fillMap()
+void Ambulance::fillMap()
 {
     fstream f;
     f.open("./data/ambulances.csv", ios::in);
@@ -25,7 +25,7 @@ void ambulance::fillMap()
     //analyzing each entry afterwards;
     while (getline(f >> ws, temp))
     {
-        ambulance a;
+        Ambulance a;
         //creating a string stream object to read from string 'temp';
         stringstream s(temp);
         string s1, s5, s6, s7;
@@ -49,7 +49,7 @@ void ambulance::fillMap()
     f.close();
     return;
 }
-void ambulance::saveMap()
+void Ambulance::saveMap()
 {
     fstream f;
     f.open("./data/temp.csv", ios::out);
@@ -69,19 +69,19 @@ void ambulance::saveMap()
     rename("./data/temp.csv", "./data/ambulances.csv");
     return;
 }
-void ambulance::addAmbulance()
+void Ambulance::addAmbulance()
 {
     if (hospital::ambulancesList.size() == hospital::ambulancesLimit)
     {
         cout<<"\n\nAmbulances limit reached, can't add more!\n\n";
         return;
     }
-    //getting the basic details of the ambulance from the user side;
-    cout << "\nEnter Model of the ambulance:\n";
+    //getting the basic details of the Ambulance from the user side;
+    cout << "\nEnter Model of the Ambulance:\n";
     getline(cin >> ws, model);
-    cout << "\nEnter Manufacturer Name of the ambulance:\n";
+    cout << "\nEnter Manufacturer Name of the Ambulance:\n";
     getline(cin >> ws, manufacturer);
-    cout << "\nEnter Vehicle Registration Number of the ambulance:\n";
+    cout << "\nEnter Vehicle Registration Number of the Ambulance:\n";
     getline(cin >> ws, vrn);
     if (hospital::ambulancesList.rbegin() != hospital::ambulancesList.rend())
         id = ((hospital::ambulancesList.rbegin())->first) + 1;
@@ -100,7 +100,7 @@ void ambulance::addAmbulance()
          << model << " by " << manufacturer << " added successfully!\n";
     cout << "Its ID is: " << id << "\n";
 }
-void ambulance::printDetails()
+void Ambulance::printDetails()
 {
     if (id == -1)
         return;
@@ -118,7 +118,7 @@ void ambulance::printDetails()
     }
     return;
 }
-void ambulance::printDetailsFromHistory(string extraDetails)
+void Ambulance::printDetailsFromHistory(string extraDetails)
 {
     if (id == -1)
         return;
@@ -132,7 +132,7 @@ void ambulance::printDetailsFromHistory(string extraDetails)
         //analyzing each entry afterwards;
         while (getline(f >> ws, temp))
         {
-            ambulance a;
+            Ambulance a;
             //creating a string stream object to read from string 'temp';
             stringstream s(temp);
             string s4;
@@ -154,7 +154,7 @@ void ambulance::printDetailsFromHistory(string extraDetails)
     cout << "Still owned?    : " << extraDetails << "\n";
     return;
 }
-void ambulance::getDetails(int rec)
+void Ambulance::getDetails(int rec)
 {
     int opt = 0;
     cout << "\nOPTIONS:\n[1]: Filter by ID\n[2]: Filter by Model\n[3]: Filter by Vehicle Reg. Number\n\n";
@@ -178,7 +178,7 @@ void ambulance::getDetails(int rec)
         string reqModel;
         cout << "Model:\n";
         getline(cin >> ws, reqModel);
-        vector<ambulance> matchingRecords;
+        vector<Ambulance> matchingRecords;
         for (auto i : hospital::ambulancesList)
         {
             if (i.second.model == reqModel)
@@ -194,7 +194,7 @@ void ambulance::getDetails(int rec)
             do
             {
                 int reqId;
-                cout << "\nEnter the ID of the required ambulance: ";
+                cout << "\nEnter the ID of the required Ambulance: ";
                 cin >> reqId;
                 if (hospital::ambulancesList.find(reqId) != hospital::ambulancesList.end())
                     *this = hospital::ambulancesList[reqId];
@@ -212,7 +212,7 @@ void ambulance::getDetails(int rec)
     else if (opt == 3)
     {
         string reqVRN;
-        cout << "Enter the vehicle reg. number of ambulance required:\n";
+        cout << "Enter the vehicle reg. number of Ambulance required:\n";
         getline(cin >> ws, reqVRN);
         for (auto i : hospital::ambulancesList)
         {
@@ -229,7 +229,7 @@ void ambulance::getDetails(int rec)
     }
     return;
 }
-void ambulance::getDetailsFromHistory()
+void Ambulance::getDetailsFromHistory()
 {
     int opt = 0;
     cout << "\nOPTIONS:\n[1]: Filter by model\n[2]: Filter by vehicle reg. number\n\n";
@@ -243,7 +243,7 @@ void ambulance::getDetailsFromHistory()
         string reqModel;
         cout << "Model:\n";
         getline(cin >> ws, reqModel);
-        vector<ambulance> matchingRecords;
+        vector<Ambulance> matchingRecords;
         vector<string> extraDetails;
         fstream f;
         f.open("./data/ambulancesHistory.csv", ios::in);
@@ -253,7 +253,7 @@ void ambulance::getDetailsFromHistory()
         //analyzing each entry afterwards;
         while (getline(f >> ws, temp))
         {
-            ambulance a;
+            Ambulance a;
             //creating a string stream object to read from string 'temp';
             stringstream s(temp);
             string s4;
@@ -282,9 +282,9 @@ void ambulance::getDetailsFromHistory()
     else if (opt == 2)
     {
         string reqVRN;
-        cout << "Enter the vehicle reg. number of ambulance required:\n";
+        cout << "Enter the vehicle reg. number of Ambulance required:\n";
         getline(cin >> ws, reqVRN);
-        vector<ambulance> matchingRecords;
+        vector<Ambulance> matchingRecords;
         vector<string> extraDetails;
         fstream f;
         f.open("./data/ambulancesHistory.csv", ios::in);
@@ -310,17 +310,17 @@ void ambulance::getDetailsFromHistory()
             }
         }
         f.close();
-        //if a record is found, it's details will be stored in the ambulance class object that called this function,
+        //if a record is found, it's details will be stored in the Ambulance class object that called this function,
         //and the control is returned;
         //else:
         cout << "\nNo matching record found!\n";
     }
     return;
 }
-void ambulance::send()
+void Ambulance::send()
 {
 
-    //*************picking an idle ambulance*************;
+    //*************picking an idle Ambulance*************;
 
     bool gotOne = 0;
     for (auto i : hospital::ambulancesList)
@@ -334,7 +334,7 @@ void ambulance::send()
     }
     if (!gotOne)
     {
-        cout << "No, idle ambulance found!"
+        cout << "No, idle Ambulance found!"
              << "\n";
         return;
     }
@@ -362,7 +362,7 @@ void ambulance::send()
     cout << "Enter destination Address:\n";
     add.takeInput();
 
-    //updating status of ambulance;
+    //updating status of Ambulance;
     hospital::ambulancesList[id] = *this;
 
     //updating status of driver;
@@ -371,16 +371,16 @@ void ambulance::send()
     cout << model << " by " << manufacturer << " sent with driver " << D.firstName << " " << D.lastName << " (ID = " << D.id << ") successfully!\n";
     return;
 }
-void ambulance::reportArrival()
+void Ambulance::reportArrival()
 {
     getDetails();
 
     //updating status of driver;
-    //note that if we first update the status of ambulance we will lose the identity of it's driver;
+    //note that if we first update the status of Ambulance we will lose the identity of it's driver;
     //and then there will be no way to update the status of the driver;
     hospital::driversList[D.id].idle = 1;
 
-    //updating status of ambulance;
+    //updating status of Ambulance;
     hospital::ambulancesList[id].idle = 1;
     hospital::ambulancesList[id].add.strToAdd("`````");
     driver d;
@@ -389,15 +389,15 @@ void ambulance::reportArrival()
     cout << "\nStatus updated successfully!\n\n";
     return;
 }
-void ambulance::removeAmbulance()
+void Ambulance::removeAmbulance()
 {
-    cout << "\nSearch for the ambulance you want to remove.\n";
+    cout << "\nSearch for the Ambulance you want to remove.\n";
     getDetails();
     if (id == -1)
         return;
     if (!idle)
     {
-        cout << "\nSorry, the ambulance you selected to remove is NOT currently idle.\nOnly idlers can be removed.\n\n";
+        cout << "\nSorry, the Ambulance you selected to remove is NOT currently idle.\nOnly idlers can be removed.\n\n";
         return;
     }
     hospital::doctorsList.erase(id);

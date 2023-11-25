@@ -69,7 +69,7 @@ void Medication::addMedication()
         cout<<"\n\nMedications limit reached, can't add more!\n\n";
         return;
     }
-    //getting the basic details of the ambulance from the user side;
+    //getting the basic details of the Ambulance from the user side;
     cout << "\nEnter Name of the Medication:\n";
     getline(cin >> ws, name);
     cout << "\nEnter Price of the Medication:\n";

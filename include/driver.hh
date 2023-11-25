@@ -5,13 +5,13 @@ using namespace std;
 
 #include "./person.hh"
 
-class ambulance;
+class Ambulance;
 class driver : public person
 {
 private:
     string licenseNumber;
     bool idle;
-    friend class ambulance;
+    friend class Ambulance;
 
 public:
     driver();

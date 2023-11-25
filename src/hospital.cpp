@@ -7,7 +7,7 @@ using namespace std;
 #include "./../include/patient.hh"
 #include "./../include/nurse.hh"
 #include "./../include/driver.hh"
-#include "./../include/ambulance.hh"
+#include "./../include/Ambulance.hh"
 #include "./../include/appointment.hh"
 #include "./../include/hospital.hh"
 #include "./../include/medication.hh"
@@ -18,7 +18,7 @@ map<int, doctor> hospital::doctorsList;
 map<int, patient> hospital::patientsList;
 map<int, nurse> hospital::nursesList;
 map<int, driver> hospital::driversList;
-map<int, ambulance> hospital::ambulancesList;
+map<int, Ambulance> hospital::ambulancesList;
 map<int, appointment> hospital::appointmentsList;
 map<int, Medication> hospital::medicationsList;
 

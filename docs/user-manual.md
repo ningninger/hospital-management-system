@@ -3,7 +3,7 @@
 <br>
 
 ## INTRODUCTION
-It's a hospital management system, that can be used to keep records of doctors, their appointments, patients, nurses, ambulances and ambulance drivers.
+It's a hospital management system, that can be used to keep records of doctors, their appointments, patients, nurses, ambulances and Ambulance drivers.
 
 ___
 
@@ -41,15 +41,15 @@ ___
 - **Book a new appointment** - system automatically alots a free time slot of the selected doctor to the patient and if no free time slot available, it reports so.
 - **System automatically clears appointments of dates older than today**
 - **Get an appointment's details**.
-- **Register a new patient, doctor, nurse, ambulance & ambulance driver** - a unique ID is provided by the system itself.
+- **Register a new patient, doctor, nurse, Ambulance & Ambulance driver** - a unique ID is provided by the system itself.
 - **Remove (Unregister) them**.
 - **Get their details** - filter options: Unique ID, Name, Mobile Number, Type - for doctors and nurses.
 - **Keep a history record of staff and patients and fetch details from history**
 - **Hospitalize a registered patient**
 - **Discharge a hospitalized patient**
 - **Report a death of a patient**
-- **Send an ambulance to an Address** - the system itself checks for an idle ambulance and an idle driver and if not available, it reports so.
-- **Report arrival of ambulance** - along with ambulance's status, system automatically updates the status of the driver who was sent with that ambulance as well.
+- **Send an Ambulance to an Address** - the system itself checks for an idle Ambulance and an idle driver and if not available, it reports so.
+- **Report arrival of Ambulance** - along with Ambulance's status, system automatically updates the status of the driver who was sent with that Ambulance as well.
 
 ___
 #### LIMITATIONS

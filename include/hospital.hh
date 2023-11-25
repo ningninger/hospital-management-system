@@ -9,7 +9,7 @@ using namespace std;
 #include "./patient.hh"
 #include "./nurse.hh"
 #include "./driver.hh"
-#include "./ambulance.hh"
+#include "./Ambulance.hh"
 #include "./appointment.hh"
 #include "./medication.hh"
 
@@ -21,7 +21,7 @@ private:
     static map<int, patient> patientsList;
     static map<int, nurse> nursesList;
     static map<int, driver> driversList;
-    static map<int, ambulance> ambulancesList;
+    static map<int, Ambulance> ambulancesList;
     static map<int, appointment> appointmentsList;
     static map<int, Medication> medicationsList;
 
@@ -37,7 +37,7 @@ private:
     friend class patient;
     friend class nurse;
     friend class driver;
-    friend class ambulance;
+    friend class Ambulance;
     friend class appointment;
     friend class Medication;
 

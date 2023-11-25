@@ -15,7 +15,7 @@ using namespace std;
 #include "./include/doctor.hh"
 #include "./include/nurse.hh"
 #include "./include/driver.hh"
-#include "./include/ambulance.hh"
+#include "./include/Ambulance.hh"
 
 void appointmentsMenu();
 void patientsMenu();
@@ -443,12 +443,12 @@ void ambulancesMenu()
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
         cout << "./HOME/AMBULANCES\n";
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
-        cout << "[01] : Add an ambulance\n";
-        cout << "[02] : Send an ambulance\n";
-        cout << "[03] : Get ambulance details\n";
-        cout << "[04] : Report ambulance arrival\n";
-        cout << "[05] : Remove an ambulance\n";
-        cout << "[06] : Fetch ambulance details from history\n";
+        cout << "[01] : Add an Ambulance\n";
+        cout << "[02] : Send an Ambulance\n";
+        cout << "[03] : Get Ambulance details\n";
+        cout << "[04] : Report Ambulance arrival\n";
+        cout << "[05] : Remove an Ambulance\n";
+        cout << "[06] : Fetch Ambulance details from history\n";
         cout << "[07] : Get details of all registered ambulances\n\n";
         cout << "[-1] : Back\n";
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
@@ -457,33 +457,33 @@ void ambulancesMenu()
 
         if (purpose == 1)
         {
-            ambulance a;
+            Ambulance a;
             a.addAmbulance();
         }
         else if (purpose == 2)
         {
-            ambulance a;
+            Ambulance a;
             a.send();
         }
         else if (purpose == 3)
         {
-            ambulance a;
+            Ambulance a;
             a.getDetails(1);
             a.printDetails();
         }
         else if (purpose == 4)
         {
-            ambulance a;
+            Ambulance a;
             a.reportArrival();
         }
         else if (purpose == 5)
         {
-            ambulance a;
+            Ambulance a;
             a.removeAmbulance();
         }
         else if (purpose == 6)
         {
-            ambulance a;
+            Ambulance a;
             a.getDetailsFromHistory();
         }
         else if (purpose == 7)
@@ -576,7 +576,7 @@ int main()
         patient p;
         nurse n;
         driver d2;
-        ambulance a1;
+        Ambulance a1;
         appointment a2;
         Medication m;
         d1.fillMap();
@@ -660,7 +660,7 @@ int main()
         patient p;
         nurse n;
         driver d2;
-        ambulance a1;
+        Ambulance a1;
         appointment a2;
         Medication m;
         d1.saveMap();

@@ -6,7 +6,7 @@ using namespace std;
 #include "./driver.hh"
 #include "./Address.hh"
 
-class ambulance
+class Ambulance
 {
 private:
     int id;
@@ -18,7 +18,7 @@ private:
     driver D;
 
 public:
-    ambulance();
+    Ambulance();
     void fillMap();
     void saveMap();
     void addAmbulance();
